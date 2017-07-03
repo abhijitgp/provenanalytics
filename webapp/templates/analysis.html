@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Proven SkinCare Analytics</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/css/2-col-portfolio.css" rel="stylesheet">
+
+        <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="../static/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/plugins/elegant_font/css/style.css">
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../static/css/styles.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<style>
+/*body {
+  font-family: 'Open Sans', arial, sans-serif;
+  color: #494d55;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}*/
+table {
+    border-collapse: collapse;
+    border: 0px solid black;
+    width: 100%;
+}
+
+th, td {
+    border: 0px solid #ddd;
+    text-align: center;
+    padding: 0px;
+
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #3D9970;
+    color: white;
+    text-align:center;
+}
+.lw{
+    background-color: #FB7874
+}
+.hi{
+    backgroud-color: #1af49d
+}
+</style>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://www.provenanalytics.site/">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+      <li><a href="./static/aboutme.html">About Me</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                 <li><a href="https://tryproven.com/">About Proven</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    
+
+    <div class="container">
+
+    <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    <small> {{ins.cat|safe}} </small>
+                </h1> 
+                <div class="cta-container">
+                        
+                  <div class="list list-inline center-block">
+                            <a class="btn btn-cta btn-orange" href={{ins.hurl|safe}} target="_blank"> View Category-Specific LDA Model</a>
+                  </div><br><br>
+
+                        <!-- <section id="code-section" class="doc-section">
+            <h2 class="section-title"></h2></section>   -->  
+                    </div>
+
+
+            </div>
+        </div>
+
+  
+  <div class="row">
+    <div class="col-sm-4">
+    {{ins.f2|safe}}<br>
+    <p>Market share of products from top four categories.</p>
+    </div>
+
+    <div class="col-sm-4">
+      {{ins.f1|safe}}<br>
+      <p>Distribution of sentiments extracted from review texts.</p>
+    </div>
+    
+    <div class="col-sm-4">
+    {{ins.f3|safe}}<br>
+    Most-popular brands in the {{ins.cat|safe}} category.
+                
+    </div>
+  </div>
+            <br> <br>
+<div class="row">
+    <div class="col-sm-4">
+    {{ins.f4|safe}}<br>
+    <p>Relationship between the percent recommendation of products and the number of times the product was reviewed.</p>
+    </div>
+
+    <div class="col-sm-4">
+    {{ins.f5|safe}}<br>
+    <p>Relationship between product review ratings (1-5) and the number of times the product was reviewed.</p>
+    </div>
+
+    <div class="col-sm-4">
+    {{ins.dv|safe}}<br>
+    <p>Ratio of Positive:Negative sentiment based on the reviews.</p>
+      
+                <!-- <p>Unknown.</p> -->
+    </div>
+  </div>
+  <br> <br>
+<div class="row">
+    <div class="col-lg-12" align="center">
+          <table>
+                  <tr>
+                    <th class="hi">Most common words among high-rated reviews</th>
+                  </tr><br>
+                  <tr>
+                    <td>{{ins.high|safe}}</td>
+                  </tr>
+          </table>
+  </div>
+<br>
+    <div class="col-lg-12" align="center">
+         <table>
+                  <tr>
+                    <th class="lw">Most common words among low-rated reviews</th>
+                  </tr><br>
+                  <tr>
+                    <td>{{ins.low|safe}}</td><br>
+                    </tr>
+         </table>
+    </div>
+    
+    
+</div>
+
+  
+
+</div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <!-- <p>Copyright &copy; Abhijit A. Gurjarpadhye, 2017</p> -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
